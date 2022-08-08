@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log("my modal"),console.log("my accordeon"),console.log("my arrow"),console.log("my sendForm"),console.log("my servises"),console.log("my slider")})();

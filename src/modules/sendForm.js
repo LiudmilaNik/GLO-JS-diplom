@@ -6,7 +6,6 @@ const sendForm = (someElem = []) => {
   const successText = "Отправлено";
   const errorText = "Ошибка...";
   const emptyText = "Заполните пустые поля!";
-  console.log(form);
 
   const validate = (list) => {
     let success = true;
@@ -53,6 +52,7 @@ const sendForm = (someElem = []) => {
             inputs.value = "";
           });
         })
+
         .catch((error) => {
           statusBlock.textContent = errorText;
         });
@@ -61,13 +61,13 @@ const sendForm = (someElem = []) => {
     }
   };
 
-  form.addEventListener("click", (event) => {
-    event.preventDefault();
-    if (event.target.matches(".button")) {
+  form.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (e.target.matches(".button")) {
       submitForm();
     }
   });
-
- };
+};
 
 export default sendForm;

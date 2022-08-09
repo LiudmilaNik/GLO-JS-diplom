@@ -11,7 +11,7 @@ const modal = () => {
     e.preventDefault();
     modal.style.display = "block";
     modalOverlay.style.display = "block";
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
   };
 
   callbackBtn.forEach((btn) => {
@@ -27,12 +27,14 @@ const modal = () => {
   buttonServises.addEventListener("click", (e) => openModal(e));
 
   modalOverlay.addEventListener("click", (e) => {
+    e.preventDefault();
+
     if (
-      e.target.closest(".modal-overlay") ||
-      e.target.classList.contains("modal-close")
+      e.target.closest(".modal-close") ||
+      !e.target.closest(".modal-callback ")
     ) {
       modalOverlay.style.display = "none";
-      document.body.style.overflow = "";
+      // document.body.style.overflow = "";
     }
   });
 };

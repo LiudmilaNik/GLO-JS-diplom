@@ -34,8 +34,6 @@ const arrowTop = () => {
     };
     scrollToTop();
   });
-
-  console.log(btnTop);
 };
 
 export default arrowTop;

@@ -7,9 +7,9 @@ const sendForm = (someElem = []) => {
   const errorText = "Ошибка...";
   const emptyText = "Заполните пустые поля!";
 
-  // const telSelector = form.querySelector('input[type="tel"]');
-  // const inputMask = new Inputmask("+7 (999) 999-99-99");
-  // inputMask.mask(telSelector);
+  const telSelector = document.getElementById("telephone");
+  const inputMask = new Inputmask("+7 (999) 999-99-99");
+  inputMask.mask(telSelector);
 
   // const validation = new JustValidate("form");
 
@@ -69,6 +69,14 @@ const sendForm = (someElem = []) => {
     }).then((res) => res.json());
   };
 
+  const clearInputs = () => {
+    form.querySelectorAll('input[type="text"]').forEach((input) => {
+      input.value = "";
+    });
+  };
+
+  const clearSuccessText = () => (statusBlock.textContent = "");
+
   const submitForm = () => {
     const formElements = form.querySelectorAll("input");
     const formData = new FormData(form);
@@ -91,6 +99,8 @@ const sendForm = (someElem = []) => {
             const inputs = document.querySelectorAll(".form-control");
             inputs.value = "";
           });
+          clearInputs();
+          setTimeout(clearSuccessText, 2000);
         })
 
         .catch((error) => {

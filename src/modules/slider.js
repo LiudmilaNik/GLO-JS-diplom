@@ -60,10 +60,6 @@ const slider = () => {
   sliderBlock.addEventListener("click", (e) => {
     e.preventDefault();
 
-    if (e.target.matches(".dot")) {
-      stopSlide();
-    } else startSlide(timeInterval);
-
     if (!e.target.matches(".dot")) {
       return;
     }

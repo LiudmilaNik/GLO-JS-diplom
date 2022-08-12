@@ -19,21 +19,21 @@ const accordeon = () => {
   //   }
   // });
   const accordeon = document.querySelector(".accordeon");
-  const contents = accordeon.querySelectorAll(".element");
+  const elements = accordeon.querySelectorAll(".element");
 
-  contents.forEach((elem) => {
+  elements.forEach((elem) => {
     const question = elem.querySelector(".title");
 
     question.addEventListener("click", () => {
-      contents.forEach((elems) => {
+      elements.forEach((elems) => {
         const answer = elems.querySelector(".element-content");
 
         if (elem == elems) {
-          answer.classList.toggle("accordeon-active");
           elems.classList.toggle("active");
+          answer.classList.toggle("accordeon-active");
         } else {
-          answer.classList.remove("accordeon-active");
           elems.classList.remove("active");
+          answer.classList.remove("accordeon-active");
         }
       });
     });

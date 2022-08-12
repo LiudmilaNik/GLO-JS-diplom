@@ -10,8 +10,8 @@ const arrowTop = () => {
 
   function scrollFunction() {
     if (
-      document.body.scrollTop > 30 ||
-      document.documentElement.scrollTop > 30
+      document.body.scrollTop > 580 ||
+      document.documentElement.scrollTop > 580
     ) {
       btnTop.style.display = "block";
     } else {

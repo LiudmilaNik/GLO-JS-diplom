@@ -1,8 +1,14 @@
 " use strict";
 const servises = () => {
-  const servises = "my servises";
+  const swiper = new Swiper(".services-elements", {
+    slidesPerView: 3,
+    loop: true,
 
-  console.log(servises);
+    navigation: {
+      nextEl: ".arrow-right",
+      prevEl: ".arrow-left",
+    },
+  });
 };
 
 export default servises;

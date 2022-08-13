@@ -11,7 +11,7 @@ const sendForm = (someElem = []) => {
   const inputMask = new Inputmask("+7 (999) 999-99-99");
   inputMask.mask(telSelector);
 
-  // const validation = new JustValidate("form");
+  const validation = new JustValidate("form");
 
   // validation
   //   .addField("#name", [

@@ -1048,7 +1048,7 @@ video#video_background {
   color: #333333;
 }
 
-.accordeon .element-content .accordeon-active {
+.accordeon .element-content.accordeon-active {
   display: block;
 }
 
@@ -1254,4 +1254,5 @@ video#video_background {
     clear: both;
   }
 }
+
 /**** /. services section *****/
